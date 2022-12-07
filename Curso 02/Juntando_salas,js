@@ -1,0 +1,5 @@
+const salaAceleradora = ["Cibely", "Janine", "Keu", "Nicole"];
+const salaInclusiva = ["Emily", "Erick", "Will", "Renato"];
+
+const salasJuntas = salaAceleradora.concat(salaInclusiva);
+console.log(salasJuntas)
