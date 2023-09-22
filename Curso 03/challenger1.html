@@ -1,0 +1,25 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var screenGame = document.querySelector('canvas');
+    var brushGame = screenGame.getContext('2d')
+
+    brushGame.fillStyle = 'green';
+    brushGame.fillRect(200, 50, 350, 300)
+
+    //eyes
+    brushGame.fillStyle = 'black';
+    brushGame.fillRect(250, 110, 90, 90);
+    brushGame.fillRect(410, 110, 90, 90);
+
+    //nouse
+    brushGame.fillStyle = 'black';
+    brushGame.fillRect(340, 200, 70, 100)
+
+    //mouse
+    brushGame.fillStyle = 'black';
+    brushGame.fillRect(300, 240, 40, 110)
+    brushGame.fillRect(410, 240, 40, 110)
+
+</script>
