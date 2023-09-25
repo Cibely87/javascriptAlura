@@ -1,0 +1,50 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var screenPlay = document.querySelector('canvas');
+    var brushPlay = screenPlay.getContext('2d');
+
+    brushPlay.fillStyle = 'lightgray';
+    brushPlay.fillRect(0, 0, 600, 400);
+
+    var target = 10;
+
+    function drawCircle(x, y, target, color) {
+
+        brushPlay.fillStyle = color;
+        brushPlay.beginPath();
+        brushPlay.arc(x, y, target, 0, 2 * Math.PI);
+        brushPlay.fill();
+
+   }
+
+    function cleanscreenPlay() {
+    brushPlay.clearRect(0, 0, 600, 400);
+
+    }
+
+    function drawTarget(x, y) {
+
+    drawCircle(x, y, target+20, 'red');
+    drawCircle(x, y, target+10, 'white');
+    drawCircle(x, y, target, 'red');
+
+    }
+
+    function findPosition(maximo) {
+
+        return Math.floor(Math.random() * maximo);
+
+    }
+
+    function updatescreenPlay() {
+    cleanscreenPlay();
+    var xRandow = findPosition(600);
+    var yRandow = findPosition(400);
+    drawTarget(xRandow, yRandow);
+    }
+
+    setInterval(updatescreenPlay, 1000);
+
+</script>
